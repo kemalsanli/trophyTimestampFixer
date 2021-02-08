@@ -1,5 +1,15 @@
 #KEMAL SANLI 08.02.2021
 import sqlite3, os, sys, subprocess
+from tkinter import filedialog
+from tkinter import *
+import tkinter as tk
+
+root = tk.Tk()
+root.title('Trophy Timestamp Fixer')
+root.geometry("250x100")
+root.eval('tk::PlaceWindow . center')
+root.resizable(False, False)
+
 
 def clearConsole():
     if sys.platform == "win32":
@@ -8,9 +18,9 @@ def clearConsole():
         stream = os.popen('clear')
         output = stream.read()
         print(output)
-
+clearConsole()
 def fixer(path):
-    clearConsole()
+    
     try:
         sqliteConnection = sqlite3.connect(path)
         cursor = sqliteConnection.cursor()
@@ -43,4 +53,26 @@ def fixer(path):
             sqliteConnection.close()
             print("Done \n")
 
-fixer('trophy_local.db')
+def browsefunc():
+
+
+    root.filename =  filedialog.askopenfilename(initialdir = "/",title = "Select DB File",filetypes = (("DB File",".db"),("All Files",".*")))
+    label1.config(text='{}'.format(os.path.basename(root.filename)))
+    if os.path.exists(root.filename):
+        b1.config(text="Choose Another")
+        clearConsole()
+        fixer(root.filename)
+
+
+
+b1=tk.Button(root,text="Choose DB",font=40,command=browsefunc)
+spaceLabel = tk.Label(root, text= "                     ")
+label1 = tk.Label(root, text= "Please Select a DB File")
+spaceLabel.pack()
+label1.pack()
+b1.pack()
+
+
+
+root.mainloop()
+clearConsole()
