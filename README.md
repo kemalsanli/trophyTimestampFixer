@@ -1,6 +1,5 @@
 # trophyTimestampFixer
-Tool to fix blank Trophy Timestamps.
-
+This tool aims to fix blank Trophy Timestamps, this tool only edits 'blank' dates.
 Works on every platform that runs python.
 
 ### Requirements
