@@ -64,7 +64,7 @@ def fixer(path):
         print("Third Querry OK {} row affected.\n".format(cursor.rowcount))
         totalRow=totalRow+cursor.rowcount
         sqliteConnection.commit()
-        print("{} columns updated successfully \n".format(totalRow))
+        print("{} rows updated successfully \n".format(totalRow))
         sqliteConnection.commit()
         cursor.close()
         totalRow=0
@@ -83,13 +83,13 @@ def browsefunc():
     root.filename =  filedialog.askopenfilename(initialdir = "/",title = "Select DB File",filetypes = (("DB File",".db"),("All Files",".*")))
     if os.path.exists(root.filename):
         label1.config(text='{}'.format(os.path.basename(root.filename)))
-        b1.config(text="Choose Another")
+        b1.config(text="Select Another")
         clearConsole()
         fixer(root.filename)
 
 
 
-b1=tk.Button(root,text="Choose DB",font=40,command=browsefunc)
+b1=tk.Button(root,text="Select DB",font=40,command=browsefunc)
 spaceLabel = tk.Label(root, text= "                     ")
 label1 = tk.Label(root, text= "Please Select a DB File")
 spaceLabel.pack()
