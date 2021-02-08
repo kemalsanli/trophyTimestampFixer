@@ -9,6 +9,8 @@ root.title('Trophy Timestamp Fixer')
 root.geometry("250x100")
 root.eval('tk::PlaceWindow . center')
 root.resizable(False, False)
+root.iconphoto(False, tk.PhotoImage(file='icon.jpg'))
+
 
 
 def clearConsole():
@@ -19,6 +21,28 @@ def clearConsole():
         output = stream.read()
         print(output)
 clearConsole()
+
+print("        Trophy Timestamp Fixer by kemalsanli")
+print("                                                                ")
+print("            Please Select a Database File")
+print("                    ___________             ")
+print("                   '._==_==_=_.'            ")
+print("                   .-\:      /-.            ")
+print("                  | (|:.     |) |           ")
+print("                   '-|:.     |-'            ")
+print("                     \::.    /              ")
+print("                      '::. .'               ")
+print("                        ) (                 ")
+print("                      _.' '._               ")
+print("                     `\"\"\"\"\"\"\"`              ")
+print("                                                                ")
+print("                                                                ")
+print("                                                                ")
+print("                                                                ")
+print("                                                                ")
+print("                                           github.com/kemalsanli")
+
+
 def fixer(path):
     
     try:
@@ -57,8 +81,8 @@ def browsefunc():
 
 
     root.filename =  filedialog.askopenfilename(initialdir = "/",title = "Select DB File",filetypes = (("DB File",".db"),("All Files",".*")))
-    label1.config(text='{}'.format(os.path.basename(root.filename)))
     if os.path.exists(root.filename):
+        label1.config(text='{}'.format(os.path.basename(root.filename)))
         b1.config(text="Choose Another")
         clearConsole()
         fixer(root.filename)
