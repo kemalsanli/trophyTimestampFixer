@@ -15,6 +15,15 @@ python trophyTimestampFixer.py
 ```
 * And follow ui.
 
+### Step by step
+
+* Use ftp payload and activate ftp
+* Locate and copy "trophy_local.db", you can find under "user/home/usernumber/trophy/db/"
+* Backup "trophy_local.db"
+* Run trophyTimestampFixer.py
+* Now you are done with "trophy_local.db", you should transfer it back to PS4 via FTP
+* When transfer done, just reboot your ps4
+
 ## Help
 
 Looks like everything works fine.
