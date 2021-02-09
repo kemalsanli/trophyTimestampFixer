@@ -48,4 +48,4 @@ Looks like everything works fine.
 You can always contribute.
 
 ## License
-[MIT](https://github.com/kemalsanli/wordKontrol/blob/main/LICENSE)
+[MIT](https://github.com/kemalsanli/trophyTimestampFixer/blob/main/LICENSE)
