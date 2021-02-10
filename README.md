@@ -2,6 +2,11 @@
 This tool aims to fix blank Trophy Timestamps and only edits 'blank' dates.
 Works on every platform that runs python.
 
+[![Download](https://img.shields.io/github/downloads/kemalsanli/trophyTimestampFixer/total?)](https://github.com/kemalsanli/trophyTimestampFixer/releases)
+[![GitHub last commit](https://img.shields.io/github/last-commit/kemalsanli/trophyTimestampFixer?)](https://github.com/kemalsanli/trophyTimestampFixer/commits/main)
+[![GitHub](https://img.shields.io/github/license/kemalsanli/trophyTimestampFixer?)](https://github.com/kemalsanli/trophyTimestampFixer/blob/main/LICENSE)
+
+
 ### Requirements
 
 * Python
